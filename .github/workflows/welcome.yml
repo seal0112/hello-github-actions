@@ -21,8 +21,9 @@ jobs:
     needs: build
     steps:
       - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "will sleep 120 seconds"
-      - run: sleep 120s
+      - run: echo branch name: "${{ github.ref }}"
+      # - run: echo "will sleep 120 seconds"
+      # - run: sleep 120s
 concurrency:
   group: 'staging'
   cancel-in-progress: true
