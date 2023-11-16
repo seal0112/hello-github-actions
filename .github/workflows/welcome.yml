@@ -16,14 +16,14 @@ jobs:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #     PR_URL: ${{ github.event.pull_request.html_url }}
   sleep:
-    name: Sleep for 180 seconds
+    name: Sleep for 60 seconds
     runs-on: ubuntu-latest
     needs: build
     steps:
       - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "branch name ${{ github.ref }}"
-      - run: echo "will sleep 300 seconds"
-      - run: sleep 300s
+      - run: echo "will sleep 60 seconds"
+      - run: sleep 60s
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
