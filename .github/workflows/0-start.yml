@@ -50,6 +50,8 @@ jobs:
             exit 0
           fi
 
+          echo "TEST_VARIABLE: ${{ vars.TEST_VARIABLE }}"
+
           echo "Make a branch"
           BRANCH=welcome-workflow
           git checkout -b $BRANCH
