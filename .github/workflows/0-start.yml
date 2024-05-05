@@ -80,3 +80,7 @@ jobs:
           from_step: 0
           to_step: 1
           branch_name: welcome-workflow
+
+      - name: Echo variable
+        run: echo {vars.TEST_VARIABLE}
+            
