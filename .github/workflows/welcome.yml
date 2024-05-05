@@ -15,6 +15,11 @@ jobs:
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #     PR_URL: ${{ github.event.pull_request.html_url }}
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo variable
+        run: echo "TEST_VARIABLE: {vars.TEST_VARIABLE}"
   sleep:
     name: Sleep for 60 seconds
     runs-on: ubuntu-latest
